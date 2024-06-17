@@ -1,0 +1,46 @@
+let users = [
+  // Two administrators
+  { id: '12345678', name: 'John', surname: 'Johnson', dob: '1980-01-01', address: '1 Main Avenue, London, UK', phone: '07788885551', role: ['employee', 'administrator'], login: 'admin1', password: 'password', branchId: ['78193827', '47839201', '19384756', '23847561', '34918276', '41728364', '58273914', '67182394', '71829364', '82937465', '93728461', '18273946', '27638451', '36482591', '47362951'], ratePerHour: 20, shifts: [] },
+  { id: '23456789', name: 'Jane', surname: 'Jackson', dob: '1981-01-01', address: '2 Main Avenue, London, UK', phone: '07788885552', role: ['employee', 'administrator'], login: 'admin2', password: 'password', branchId: ['78193827', '47839201', '19384756', '23847561', '34918276', '41728364', '58273914', '67182394', '71829364', '82937465', '93728461', '18273946', '27638451', '36482591', '47362951'], ratePerHour: 20, shifts: [] },
+  
+  // Four managers
+  { id: '34567890', name: 'Jim', surname: 'James', dob: '1982-01-01', address: '3 Main Avenue, London, UK', phone: '07788885553', role: ['employee', 'manager'], login: 'manager1', password: 'password', branchId: ['78193827', '47839201', '19384756', '23847561', '34918276'], ratePerHour: 18, shifts: [] },
+  { id: '45678901', name: 'Jack', surname: 'Johnson', dob: '1983-01-01', address: '4 Main Avenue, London, UK', phone: '07788885554', role: ['employee', 'manager'], login: 'manager2', password: 'password', branchId: ['34918276', '41728364', '58273914', '67182394', '71829364'], ratePerHour: 18, shifts: [] },
+  { id: '56789012', name: 'Johnny', surname: 'Smith', dob: '1984-01-01', address: '5 Main Avenue, London, UK', phone: '07788885555', role: ['employee', 'manager'], login: 'manager3', password: 'password', branchId: ['71829364', '82937465', '93728461', '18273946', '27638451'], ratePerHour: 18, shifts: [] },
+  { id: '67890123', name: 'Jameson', surname: 'Taylor', dob: '1985-01-01', address: '6 Main Avenue, London, UK', phone: '07788885556', role: ['employee', 'manager'], login: 'manager4', password: 'password', branchId: ['93728461', '18273946', '27638451', '36482591', '47362951'], ratePerHour: 18, shifts: [] },
+  
+  // Eight cashiers
+  { id: '78901234', name: 'Cathy', surname: 'Miller', dob: '1986-01-01', address: '7 Main Avenue, London, UK', phone: '07788885557', role: ['employee', 'cashier'], login: 'cashier1', password: 'password', branchId: ['78193827'], ratePerHour: 15, shifts: [] },
+  { id: '89012345', name: 'Casey', surname: 'Brown', dob: '1987-01-01', address: '8 Main Avenue, London, UK', phone: '07788885558', role: ['employee', 'cashier'], login: 'cashier2', password: 'password', branchId: ['47839201'], ratePerHour: 15, shifts: [] },
+  { id: '90123456', name: 'Chris', surname: 'Garcia', dob: '1988-01-01', address: '9 Main Avenue, London, UK', phone: '07788885559', role: ['employee', 'cashier'], login: 'cashier3', password: 'password', branchId: ['19384756'], ratePerHour: 15, shifts: [] },
+  { id: '01234567', name: 'Courtney', surname: 'Lee', dob: '1989-01-01', address: '10 Main Avenue, London, UK', phone: '07788885560', role: ['employee', 'cashier'], login: 'cashier4', password: 'password', branchId: ['23847561'], ratePerHour: 15, shifts: [] },
+  { id: '12345678', name: 'Clara', surname: 'Martinez', dob: '1990-01-01', address: '11 Main Avenue, London, UK', phone: '07788885561', role: ['employee', 'cashier'], login: 'cashier5', password: 'password', branchId: ['34918276'], ratePerHour: 15, shifts: [] },
+  { id: '23456789', name: 'Carla', surname: 'Rodriguez', dob: '1991-01-01', address: '12 Main Avenue, London, UK', phone: '07788885562', role: ['employee', 'cashier'], login: 'cashier6', password: 'password', branchId: ['41728364'], ratePerHour: 15, shifts: [] },
+  { id: '34567890', name: 'Carmen', surname: 'Lopez', dob: '1992-01-01', address: '13 Main Avenue, London, UK', phone: '07788885563', role: ['employee', 'cashier'], login: 'cashier7', password: 'password', branchId: ['58273914'], ratePerHour: 15, shifts: [] },
+  { id: '45678901', name: 'Candice', surname: 'Taylor', dob: '1993-01-01', address: '14 Main Avenue, London, UK', phone: '07788885564', role: ['employee', 'cashier'], login: 'cashier8', password: 'password', branchId: ['18273946'], ratePerHour: 15, shifts: [] }
+    
+    // Twenty employees
+    // { id: 15, name: 'Elliot', surname: 'Employee', dob: '1994-01-01', address: '15 Main Avenue, London, UK', phone: '07788885565', role: ['employee'], login: 'employee1', password: 'password', branch_id: [], rate_per_hour: 10, shifts: [] },
+    // { id: 16, name: 'Emily', surname: 'Employee', dob: '1995-01-01', address: '16 Main Avenue, London, UK', phone: '07788885566', role: ['employee'], login: 'employee2', password: 'password', branch_id: [], rate_per_hour: 10, shifts: [] },
+    // { id: 17, name: 'Ethan', surname: 'Employee', dob: '1996-01-01', address: '17 Main Avenue, London, UK', phone: '07788885567', role: ['employee'], login: 'employee3', password: 'password', branch_id: [], rate_per_hour: 10, shifts: [] },
+    // { id: 18, name: 'Ella', surname: 'Employee', dob: '1997-01-01', address: '18 Main Avenue, London, UK', phone: '07788885568', role: ['employee'], login: 'employee4', password: 'password', branch_id: [], rate_per_hour: 10, shifts: [] },
+    // { id: 19, name: 'Elijah', surname: 'Employee', dob: '1998-01-01', address: '19 Main Avenue, London, UK', phone: '07788885569', role: ['employee'], login: 'employee5', password: 'password', branch_id: [], rate_per_hour: 10, shifts: [] },
+    // { id: 20, name: 'Eleanor', surname: 'Employee', dob: '1999-01-01', address: '20 Main Avenue, London, UK', phone: '07788885570', role: ['employee'], login: 'employee6', password: 'password', branch_id: [], rate_per_hour: 10, shifts: [] },
+    // { id: 21, name: 'Evan', surname: 'Employee', dob: '2000-01-01', address: '21 Main Avenue, London, UK', phone: '07788885571', role: ['employee'], login: 'employee7', password: 'password', branch_id: [], rate_per_hour: 10, shifts: [] },
+    // { id: 22, name: 'Eve', surname: 'Employee', dob: '2001-01-01', address: '22 Main Avenue, London, UK', phone: '07788885572', role: ['employee'], login: 'employee8', password: 'password', branch_id: [], rate_per_hour: 10, shifts: [] },
+    // { id: 23, name: 'Eric', surname: 'Employee', dob: '2002-01-01', address: '23 Main Avenue, London, UK', phone: '07788885573', role: ['employee'], login: 'employee9', password: 'password', branch_id: [], rate_per_hour: 10, shifts: [] },
+    // { id: 24, name: 'Eva', surname: 'Employee', dob: '2003-01-01', address: '24 Main Avenue, London, UK', phone: '07788885574', role: ['employee'], login: 'employee10', password: 'password', branch_id: [], rate_per_hour: 10, shifts: [] },
+    // { id: 25, name: 'Edward', surname: 'Employee', dob: '2004-01-01', address: '25 Main Avenue, London, UK', phone: '07788885575', role: ['employee'], login: 'employee11', password: 'password', branch_id: [], rate_per_hour: 10, shifts: [] },
+    // { id: 26, name: 'Eliza', surname: 'Employee', dob: '2005-01-01', address: '26 Main Avenue, London, UK', phone: '07788885576', role: ['employee'], login: 'employee12', password: 'password', branch_id: [], rate_per_hour: 10, shifts: [] },
+    // { id: 27, name: 'Eden', surname: 'Employee', dob: '2006-01-01', address: '27 Main Avenue, London, UK', phone: '07788885577', role: ['employee'], login: 'employee13', password: 'password', branch_id: [], rate_per_hour: 10, shifts: [] },
+    // { id: 28, name: 'Edgar', surname: 'Employee', dob: '2007-01-01', address: '28 Main Avenue, London, UK', phone: '07788885578', role: ['employee'], login: 'employee14', password: 'password', branch_id: [], rate_per_hour: 10, shifts: [] },
+    // { id: 29, name: 'Ezekiel', surname: 'Employee', dob: '2008-01-01', address: '29 Main Avenue, London, UK', phone: '07788885579', role: ['employee'], login: 'employee15', password: 'password', branch_id: [], rate_per_hour: 10, shifts: [] },
+    // { id: 30, name: 'Esme', surname: 'Employee', dob: '2009-01-01', address: '30 Main Avenue, London, UK', phone: '07788885580', role: ['employee'], login: 'employee16', password: 'password', branch_id: [], rate_per_hour: 10, shifts: [] },
+    // { id: 31, name: 'Esther', surname: 'Employee', dob: '2010-01-01', address: '31 Main Avenue, London, UK', phone: '07788885581', role: ['employee'], login: 'employee17', password: 'password', branch_id: [], rate_per_hour: 10, shifts: [] },
+    // { id: 32, name: 'Ezekiel', surname: 'Employee', dob: '2011-01-01', address: '32 Main Avenue, London, UK', phone: '07788885582', role: ['employee'], login: 'employee18', password: 'password', branch_id: [], rate_per_hour: 10, shifts: [] },
+    // { id: 33, name: 'Ezra', surname: 'Employee', dob: '2012-01-01', address: '33 Main Avenue, London, UK', phone: '07788885583', role: ['employee'], login: 'employee19', password: 'password', branch_id: [], rate_per_hour: 10, shifts: [] },
+    // { id: 34, name: 'Ellis', surname: 'Employee', dob: '2013-01-01', address: '34 Main Avenue, London, UK', phone: '07788885584', role: ['employee'], login: 'employee20', password: 'password', branch_id: [], rate_per_hour: 10, shifts: [] }
+  ];
+  
+  module.exports = users;
+  
